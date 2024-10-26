@@ -1,0 +1,19 @@
+﻿<Window x:Class="Lab3.AddEditCallRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление записи разговора" Height="400" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Выберите дату разговора:"/>
+            <DatePicker x:Name="CallDatePicker"/>
+            <Label Content="Введите ФИО:"/>
+            <TextBox x:Name="OwnerName"/>
+            <Label Content="Введите код города:"/>
+            <TextBox x:Name="CityCode"/>
+            <Label Content="Введите продолжительность (мин):"/>
+            <TextBox x:Name="Duration"/>
+            <Button Content="Сохранить" Click="SaveButton_Click"/>
+            <Button Content="Отмена" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

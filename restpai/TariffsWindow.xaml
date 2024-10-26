@@ -1,0 +1,21 @@
+﻿<Window x:Class="Lab3.TariffsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Тарифы" Height="450" Width="600">
+    <Grid>
+        <ListView x:Name="TariffsList" SelectionChanged="TariffsList_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding CityCode}" Width="100"/>
+                        <TextBlock Text="{Binding CityName}" Width="200"/>
+                        <TextBlock Text="{Binding CostPerMinute}" Width="100"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Добавить тариф" Click="AddTariffButton_Click"/>
+        <Button Content="Редактировать тариф" Click="EditTariffButton_Click"/>
+        <Button Content="Удалить тариф" Click="DeleteTariffButton_Click"/>
+    </Grid>
+</Window>
